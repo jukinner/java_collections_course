@@ -1,0 +1,25 @@
+Section 2. collection behaniors
+
+common methods amongst different types of collections
+
+size()-get the number of elements in the collection
+isEmpty()-boolean= returns true if size() == 0;
+add() ensure that an element is in the collection
+addAll() add all the elements of the argument collection to this collection
+remove(element)
+removeAll(collection)
+retainAll(collection)
+contains(element) true if in there
+containsAll(collection) - True if all the elemments of the argument collection are in this collection
+clear()-remove all elements from this collection
+
+
+
+Lists
+Also have a few methods
+add(int index, E e)
+get(int Index); like array[1] would return the value at index 1
+remove(int index) - remove item at this index
+set(int indext, E element); similar in ruby to array[0] = abc
+boolean addAll(int index, Collection c); take this entire other collection and add it into your list.
+
