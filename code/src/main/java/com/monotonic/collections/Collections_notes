@@ -65,3 +65,34 @@ compute - look up a key, takes afunction. if value is present, it returns it. If
 merge - takes a key AND a value and a remapping function. if there is no value, the value uses a new value. If value exists, merge is called on it. GOod for keeping a total in a value.
 
 forEach(convenient callback based Iteration). similar to foreach on collection. There is no easy way to iterate over hashmaps without this. ForEach passes both
+
+Map Implementation notes-understanding when to use which type of Map.
+
+Hash Map -good general purpose implementation - good overall option
+TreeMap-Defines sort order and adds functionality.-some circumstances when it is better.
+
+There are identityHashMap, linkedHashMap, enumMap . Read on your own.
+
+How does HashMap work?
+1) uses the .hashcode() method of the key.
+2) maintains an array of buckets.
+3) computes the hash value from the key modulus the count of the buckerts and that defines a slot in the backing array to store it.
+
+Buckets are linked lists to accommodate collisions. Each buckets are
+in java 8 buckets can be trees.
+the number of buckets increases with more elements (the backing array of elements)
+
+
+TreeMap.
+have keys with a defined sort order via comparator
+they used a balanced binary tree. each node has 2 successive node. Nodes with lower sort orders go to the left. Bigger to the right.
+The tree gets rebalanced so one side is never bigger than other side.
+Generally hashmaps
+
+
+WITH HASH MAPS-ALways have immutable values as your key. Having mutable keys can messup the hashcode system used to track what is in a hashMap.
+
+Maps assocate keys and values.
+2 key implementations. tree and hash. Hash is the general purpose
+API still improving in Java8 and beyond.
+There are other implementations. like enum map, linked HashMap. 

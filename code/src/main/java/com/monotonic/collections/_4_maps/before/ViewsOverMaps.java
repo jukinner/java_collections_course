@@ -51,9 +51,9 @@ public class ViewsOverMaps
             entry.setValue(ProductFixtures.window);
         }
 //
-        Map.Entry<Integer, Product> entry = Map.entry(3, ProductFixtures.window);
-        entries.add(entry); //this can not be added.
+//        Map.Entry<Integer, Product> entry = Map.entry(3, ProductFixtures.window);
+//        entries.add(entry); //this can not be added due to abstraction error.
 ////
-        System.out.println(idToProduct);
+//        System.out.println(idToProduct);
     }
 }
